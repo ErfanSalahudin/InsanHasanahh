@@ -77,7 +77,7 @@ export function Footer() {
               <p>Jl. Pesona Cianjur Indah Blok A1 No.14</p>
               <p>Nagrak, Cianjur 43215</p>
               <p>Telp: 085600842591</p>
-              <p>Email: info@tkinsanhasanah.sch.id</p>
+              <p>Email: tkinsanhasanah05@gmail.com</p>
             </div>
             
             <div className="flex gap-3">

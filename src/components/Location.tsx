@@ -51,8 +51,7 @@ export function Location() {
                 <div>
                   <h4 className="text-gray-800 mb-1">Alamat</h4>
                   <p className="text-gray-600">
-                    Jl. Pendidikan No. 123, Kelurahan Hasanah,
-                    Kecamatan Cerdas, Jakarta Selatan 12345
+                    Jl. Pesona Cianjur Indah Blok A1 No.14, Nagrak, Cianjur, Jawa Barat 43215
                   </p>
                 </div>
               </motion.div>
@@ -66,8 +65,7 @@ export function Location() {
                 </div>
                 <div>
                   <h4 className="text-gray-800 mb-1">Telepon</h4>
-                  <p className="text-gray-600">(021) 1234-5678</p>
-                  <p className="text-gray-600">0812-3456-7890</p>
+                  <p className="text-gray-600">085600842591</p>
                 </div>
               </motion.div>
 
@@ -80,8 +78,7 @@ export function Location() {
                 </div>
                 <div>
                   <h4 className="text-gray-800 mb-1">Email</h4>
-                  <p className="text-gray-600">info@tkinsanhasanah.sch.id</p>
-                  <p className="text-gray-600">admin@tkinsanhasanah.sch.id</p>
+                  <p className="text-gray-600">tkinsanhasanah05@gmail.com</p>
                 </div>
               </motion.div>
 
@@ -127,7 +124,7 @@ export function Location() {
             className="bg-white rounded-2xl overflow-hidden shadow-lg h-full min-h-[500px]"
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.0!2d106.8!3d-6.2!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMTInMDAuMCJTIDEwNsKwNDgnMDAuMCJF!5e0!3m2!1sid!2sid!4v1234567890"
+              src="https://www.google.com/maps/place/Insan+Hasanah/@-6.8380065,107.1158855,17z/data=!3m1!4b1!4m6!3m5!1s0x2e68526ea94a3b2d:0x623a9fccdb892e3a!8m2!3d-6.8380065!4d107.1184604!16s%2Fg%2F11rwwf1dst?entry=ttu&g_ep=EgoyMDI1MTIwMi4wIKXMDSoASAFQAw%3D%3D"
               width="100%"
               height="100%"
               style={{ border: 0, minHeight: '500px' }}
