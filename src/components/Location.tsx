@@ -51,7 +51,7 @@ export function Location() {
                 <div>
                   <h4 className="text-gray-800 mb-1">Alamat</h4>
                   <p className="text-gray-600">
-                    Jl. Pesona Cianjur Indah Blok A1 No.14, Nagrak, Cianjur, Jawa Barat 43215
+                    Jl. Pesona Cianjur Indah No.14 BLOK A1, Nagrak, Cianjur, Cianjur Regency, West Java 43215
                   </p>
                 </div>
               </motion.div>
@@ -124,7 +124,7 @@ export function Location() {
             className="bg-white rounded-2xl overflow-hidden shadow-lg h-full min-h-[500px]"
           >
             <iframe
-              src="https://www.google.com/maps/place/Insan+Hasanah/@-6.8380065,107.1158855,17z/data=!3m1!4b1!4m6!3m5!1s0x2e68526ea94a3b2d:0x623a9fccdb892e3a!8m2!3d-6.8380065!4d107.1184604!16s%2Fg%2F11rwwf1dst?entry=ttu&g_ep=EgoyMDI1MTIwMi4wIKXMDSoASAFQAw%3D%3D"
+              src="https://maps.google.com/maps?q=Jl.+Pesona+Cianjur+Indah+No.14+BLOK+A1,+Nagrak,+Cianjur,+Cianjur+Regency,+West+Java+43215&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0, minHeight: '500px' }}
