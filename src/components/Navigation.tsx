@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'motion/react';
 import { Menu, X } from 'lucide-react';
+import logo from '../asset/logotkinsanhasanah.jpg';
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,9 +30,11 @@ export function Navigation() {
             transition={{ delay: 0.2 }}
             className="flex items-center gap-3"
           >
-            <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-blue-500 rounded-full flex items-center justify-center">
-              <span className="text-white font-bold text-xl">TK</span>
-            </div>
+            <img
+              src={logo}
+              alt="TK Insan Hasanah Logo"
+              className="w-12 h-12 rounded-full"
+            />
             <div>
               <h1 className="text-red-600 font-bold">TK INSAN HASANAH</h1>
               <p className="text-xs text-gray-600">Membentuk Generasi Berkualitas</p>

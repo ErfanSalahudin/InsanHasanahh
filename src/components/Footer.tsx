@@ -1,12 +1,13 @@
 import { motion } from 'motion/react';
 import { Heart, Facebook, Instagram, Youtube, Mail } from 'lucide-react';
+import logo from '../asset/logotkinsanhasanah.jpg';
 
 export function Footer() {
   const socialLinks = [
     { icon: Facebook, href: '#', label: 'Facebook' },
-    { icon: Instagram, href: '#', label: 'Instagram' },
-    { icon: Youtube, href: '#', label: 'YouTube' },
-    { icon: Mail, href: '#', label: 'Email' },
+    { icon: Instagram, href: 'https://www.instagram.com/kb.tk_insanhasanah/', label: 'Instagram' },
+    { icon: Youtube, href: 'https://www.youtube.com/@kbtkinsanhasanahpesonacian9809', label: 'YouTube' },
+    { icon: Mail, href: 'tkinsanhasanah05@gmail.com', label: 'Email' },
   ];
 
   return (
@@ -20,9 +21,7 @@ export function Footer() {
             viewport={{ once: true }}
           >
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center">
-                <span className="text-red-600 font-bold text-xl">TK</span>
-              </div>
+              <img src={logo} alt="TK Insan Hasanah Logo" className="w-12 h-12 rounded-full" />
               <div>
                 <h3 className="font-bold">TK INSAN HASANAH</h3>
                 <p className="text-sm text-red-100">Membentuk Generasi Berkualitas</p>
@@ -75,9 +74,9 @@ export function Footer() {
           >
             <h4 className="font-bold mb-4">Hubungi Kami</h4>
             <div className="space-y-2 text-red-100 text-sm mb-6">
-              <p>Jl. Pendidikan No. 123</p>
-              <p>Jakarta Selatan 12345</p>
-              <p>Telp: (021) 1234-5678</p>
+              <p>Jl. Pesona Cianjur Indah Blok A1 No.14</p>
+              <p>Nagrak, Cianjur 43215</p>
+              <p>Telp: 085600842591</p>
               <p>Email: info@tkinsanhasanah.sch.id</p>
             </div>
             

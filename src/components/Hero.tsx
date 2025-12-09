@@ -1,6 +1,15 @@
+import { useState } from 'react';
 import { motion } from 'motion/react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { ArrowRight, Star } from 'lucide-react';
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogTitle,
+  DialogTrigger,
+} from './ui/dialog';
+import accreditationCert from '../asset/Sertifikat Akreditasi TK InHas_page-0001.jpg';
 
 export function Hero() {
   return (
@@ -48,7 +57,7 @@ export function Hero() {
               className="flex items-center gap-2 mb-4"
             >
               <Star className="text-yellow-300 fill-yellow-300" size={20} />
-              <span className="text-white">Taman Kanak-Kanak Terbaik</span>
+              <span className="text-white">Taman Kanak-Kanak Dengan Fasilitas dan Pendidikan Terbaik</span>
             </motion.div>
 
             <motion.h1
@@ -66,7 +75,7 @@ export function Hero() {
               transition={{ delay: 0.4 }}
               className="text-white text-xl mb-8"
             >
-              Membentuk generasi berkualitas dengan pendidikan yang menyenangkan dan bermakna.
+              Membentuk generasi berkualitas Serta CERDAS (Ceria, Energik, Religius, Disiplin, Antusias, Semangat)
             </motion.p>
 
             <motion.div
@@ -119,23 +128,45 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="relative"
           >
-            <motion.div
-              animate={{
-                y: [0, -20, 0],
-              }}
-              transition={{
-                duration: 3,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
-              className="relative rounded-3xl overflow-hidden shadow-2xl"
-            >
-              <ImageWithFallback
-                src="https://images.unsplash.com/photo-1648143714234-810e3ce38cc6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxraW5kZXJnYXJ0ZW4lMjBjaGlsZHJlbiUyMHBsYXlpbmd8ZW58MXx8fHwxNzY1MjYxMjE5fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                alt="Anak-anak TK bermain"
-                className="w-full h-[500px] object-cover"
-              />
-            </motion.div>
+            <Dialog>
+              <DialogTrigger asChild>
+                <motion.div
+                  animate={{
+                    y: [0, -20, 0],
+                  }}
+                  transition={{
+                    duration: 3,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                  className="relative rounded-3xl overflow-hidden shadow-2xl cursor-pointer hover:shadow-3xl transition-shadow"
+                >
+                  <ImageWithFallback
+                    src={accreditationCert}
+                    alt="Sertifikat Akreditasi TK Insan Hasanah"
+                    className="w-full h-[500px] object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
+                    <div className="text-white opacity-0 hover:opacity-100 transition-opacity duration-300 text-lg font-semibold">
+                      Klik untuk memperbesar
+                    </div>
+                  </div>
+                </motion.div>
+              </DialogTrigger>
+              <DialogContent className="max-w-[95vw] max-h-[95vh] w-auto h-auto p-0">
+                <DialogTitle className="sr-only">Sertifikat Akreditasi TK Insan Hasanah</DialogTitle>
+                <DialogDescription className="sr-only">
+                  Sertifikat akreditasi resmi dari TK Insan Hasanah menunjukkan pengakuan kualitas pendidikan yang tinggi
+                </DialogDescription>
+                <div className="flex items-center justify-center p-4">
+                  <img
+                    src={accreditationCert}
+                    alt="Sertifikat Akreditasi TK Insan Hasanah - Tampilan Penuh"
+                    className="max-w-full max-h-full object-contain rounded-lg"
+                  />
+                </div>
+              </DialogContent>
+            </Dialog>
 
             {/* Floating Elements */}
             <motion.div

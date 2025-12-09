@@ -91,10 +91,12 @@ export function About() {
             transition={{ duration: 0.6 }}
             className="bg-gradient-to-br from-red-500 to-red-600 rounded-2xl p-8 text-white"
           >
-            <h3 className="text-2xl mb-4">Visi</h3>
+            <h3 className="text-center text-2xl mb-4">Visi</h3>
             <p>
-              Menjadi lembaga pendidikan anak usia dini terdepan yang menghasilkan generasi 
-              cerdas, berkarakter, dan berakhlak mulia.
+              Terwujudnya peserta didik  sebagai Insan yang Bertaqwa dan berahlak mulia dan CERDAS 
+            </p>
+            <p>
+              ( Ceria, Energik, Religius, Disiplin, Antusias, Semangat).
             </p>
           </motion.div>
 
