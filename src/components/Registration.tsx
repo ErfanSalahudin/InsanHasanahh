@@ -159,7 +159,7 @@ export function Registration() {
                   transition={{ delay: 0.1 }}
                 >
                   <label className="block text-foreground mb-2">
-                    <Mail className="inline mr-2" size={18} />
+                    <Mail className="inline mr-2 text-red-500" size={18} />
                     Email
                   </label>
                   <input
@@ -180,7 +180,7 @@ export function Registration() {
                   transition={{ delay: 0.2 }}
                 >
                   <label className="block text-foreground mb-2">
-                    <User className="inline mr-2" size={18} />
+                    <User className="inline mr-2 text-blue-500" size={18} />
                     Nama Orang Tua/Wali
                   </label>
                   <input
@@ -201,7 +201,7 @@ export function Registration() {
                   transition={{ delay: 0.3 }}
                 >
                   <label className="block text-foreground mb-2">
-                    <Phone className="inline mr-2" size={18} />
+                    <Phone className="inline mr-2 text-red-500" size={18} />
                     No Telepon Orang Tua
                   </label>
                   <input
@@ -222,7 +222,7 @@ export function Registration() {
                   transition={{ delay: 0.4 }}
                 >
                   <label className="block text-foreground mb-2">
-                    <User className="inline mr-2" size={18} />
+                    <User className="inline mr-2 text-blue-500" size={18} />
                     Nama Lengkap Anak
                   </label>
                   <input
@@ -263,7 +263,7 @@ export function Registration() {
                   transition={{ delay: 0.6 }}
                 >
                   <label className="block text-foreground mb-2">
-                    <MapPin className="inline mr-2" size={18} />
+                    <MapPin className="inline mr-2 text-blue-500" size={18} />
                     Kelas yang Dituju
                   </label>
                   <select
@@ -274,8 +274,8 @@ export function Registration() {
                     className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-blue-500 focus:outline-none transition-colors"
                   >
                     <option value="" style={{ color: 'black' }}>Pilih kelas</option>
-                    <option value="Kelas B" style={{ color: 'black' }}>Kelas B (5-6 tahun)</option>
-                    <option value="Kelas A" style={{ color: 'black' }}>Kelas A (4-5 tahun)</option>
+                    <option value="Kelas B (5-6 tahun)" style={{ color: 'black' }}>Kelas B (5-6 tahun)</option>
+                    <option value="Kelas A (4-5 tahun)" style={{ color: 'black' }}>Kelas A (4-5 tahun)</option>
                     <option value="Kelompok Bermain" style={{ color: 'black' }}>Kelompok Bermain</option>
                   </select>
                 </motion.div>
