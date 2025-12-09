@@ -19,7 +19,7 @@ export function Registration() {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://localhost:3002/api/submit-registration', {
+      const response = await fetch('/api/submit-registration', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
