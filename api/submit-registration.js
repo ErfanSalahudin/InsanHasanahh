@@ -91,19 +91,11 @@ export default async function (req, res) {
       } else {
         const birthDate = new Date(formData.tanggalLahir);
         const today = new Date();
-        const minAge = new Date();
-        minAge.setFullYear(today.getFullYear() - 20);
-        const maxAge = new Date();
-        maxAge.setFullYear(today.getFullYear() - 2);
 
         if (isNaN(birthDate.getTime())) {
           errors.push('Format tanggal lahir tidak valid');
         } else if (birthDate > today) {
           errors.push('Tanggal lahir tidak boleh di masa depan');
-        } else if (birthDate < minAge) {
-          errors.push('Anak terlalu tua untuk TK (maksimal 6 tahun)');
-        } else if (birthDate > maxAge) {
-          errors.push('Anak terlalu muda untuk TK (minimal 2 tahun)');
         }
       }
       if (!formData.kelasDituju || formData.kelasDituju === '') {
