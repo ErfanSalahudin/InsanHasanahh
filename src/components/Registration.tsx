@@ -71,7 +71,7 @@ export function Registration() {
   };
 
   return (
-    <section id="registration" className="py-20 bg-gradient-to-b from-blue-50 to-white relative overflow-hidden">
+    <section id="registration" className="py-20 bg-gradient-to-b from-accent/20 to-background relative overflow-hidden">
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
           animate={{
@@ -118,7 +118,7 @@ export function Registration() {
           <h2 className="text-red-600 text-4xl md:text-5xl mb-4">
             Daftar Sekarang
           </h2>
-          <p className="text-gray-600 text-lg max-w-3xl mx-auto">
+          <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
             Bergabunglah dengan TK Insan Hasanah dan berikan pendidikan terbaik untuk buah hati Anda
           </p>
         </motion.div>
@@ -128,7 +128,7 @@ export function Registration() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="bg-white rounded-3xl shadow-2xl p-8 md:p-12"
+          className="bg-card rounded-3xl shadow-2xl p-8 md:p-12"
         >
           {!isSubmitted ? (
             <>
@@ -158,7 +158,7 @@ export function Registration() {
                   viewport={{ once: true }}
                   transition={{ delay: 0.1 }}
                 >
-                  <label className="block text-gray-700 mb-2">
+                  <label className="block text-foreground mb-2">
                     <Mail className="inline mr-2" size={18} />
                     Email
                   </label>
@@ -179,7 +179,7 @@ export function Registration() {
                   viewport={{ once: true }}
                   transition={{ delay: 0.2 }}
                 >
-                  <label className="block text-gray-700 mb-2">
+                  <label className="block text-foreground mb-2">
                     <User className="inline mr-2" size={18} />
                     Nama Orang Tua/Wali
                   </label>
@@ -200,7 +200,7 @@ export function Registration() {
                   viewport={{ once: true }}
                   transition={{ delay: 0.3 }}
                 >
-                  <label className="block text-gray-700 mb-2">
+                  <label className="block text-foreground mb-2">
                     <Phone className="inline mr-2" size={18} />
                     No Telepon Orang Tua
                   </label>
@@ -221,7 +221,7 @@ export function Registration() {
                   viewport={{ once: true }}
                   transition={{ delay: 0.4 }}
                 >
-                  <label className="block text-gray-700 mb-2">
+                  <label className="block text-foreground mb-2">
                     <User className="inline mr-2" size={18} />
                     Nama Lengkap Anak
                   </label>
@@ -242,7 +242,7 @@ export function Registration() {
                   viewport={{ once: true }}
                   transition={{ delay: 0.5 }}
                 >
-                  <label className="block text-gray-700 mb-2">
+                  <label className="block text-foreground mb-2">
                     <Calendar className="inline mr-2" size={18} />
                     Tanggal Lahir Anak
                   </label>
@@ -262,7 +262,7 @@ export function Registration() {
                   viewport={{ once: true }}
                   transition={{ delay: 0.6 }}
                 >
-                  <label className="block text-gray-700 mb-2">
+                  <label className="block text-foreground mb-2">
                     <MapPin className="inline mr-2" size={18} />
                     Kelas yang Dituju
                   </label>
@@ -273,11 +273,10 @@ export function Registration() {
                     required
                     className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-blue-500 focus:outline-none transition-colors"
                   >
-                    <option value="">Pilih kelas</option>
-                    <option value="Kelas B (5-6 tahun)">Kelas B (5-6 tahun)</option>
-                    <option value="Kelas A (4-5 tahun)">Kelas A (4-5 tahun)</option>
-                    <option value="Kelompok Bermain">Kelompok Bermain</option>
-
+                    <option value="" style={{ color: 'black' }}>Pilih kelas</option>
+                    <option value="Kelas B (5-6 tahun)" style={{ color: 'black' }}>Kelas B (5-6 tahun)</option>
+                    <option value="Kelas A (4-5 tahun)" style={{ color: 'black' }}>Kelas A (4-5 tahun)</option>
+                    <option value="Kelompok Bermain" style={{ color: 'black' }}>Kelompok Bermain</option>
                   </select>
                 </motion.div>
               </div>
@@ -309,7 +308,7 @@ export function Registration() {
               <h3 className="text-green-600 text-3xl mb-3">
                 Pendaftaran Berhasil!
               </h3>
-              <p className="text-gray-600 text-lg">
+              <p className="text-muted-foreground text-lg">
                 Terima kasih telah mendaftar. Tim kami akan segera menghubungi Anda.
               </p>
             </motion.div>
@@ -323,7 +322,7 @@ export function Registration() {
           transition={{ delay: 0.4 }}
           className="mt-8 text-center"
         >
-          <p className="text-gray-600">
+          <p className="text-muted-foreground">
             Butuh bantuan? Hubungi kami di{' '}
             <a href="tel:085600842591" className="text-red-600 hover:underline">
               085600842591

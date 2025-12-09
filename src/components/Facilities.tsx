@@ -37,7 +37,7 @@ const facilities = [
 
 export function Facilities() {
   return (
-    <section id="facilities" className="py-20 bg-gradient-to-b from-blue-50 to-white">
+    <section id="facilities" className="py-20 bg-gradient-to-b from-accent/20 to-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -58,7 +58,7 @@ export function Facilities() {
           <h2 className="text-blue-600 text-4xl md:text-5xl mb-4">
             Fasilitas Lengkap & Modern
           </h2>
-          <p className="text-gray-600 text-lg max-w-3xl mx-auto">
+          <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
             Kami menyediakan fasilitas terbaik untuk mendukung proses pembelajaran yang optimal
           </p>
         </motion.div>
@@ -73,7 +73,7 @@ export function Facilities() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ scale: 1.05 }}
-              className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all cursor-pointer"
+              className="bg-card rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all cursor-pointer"
             >
               <motion.div
                 whileHover={{ rotate: [0, -10, 10, -10, 0] }}
@@ -83,7 +83,7 @@ export function Facilities() {
                 <facility.icon className="text-white" size={28} />
               </motion.div>
               <h3 className="text-blue-600 text-xl mb-2">{facility.title}</h3>
-              <p className="text-gray-600">{facility.description}</p>
+              <p className="text-muted-foreground">{facility.description}</p>
             </motion.div>
           ))}
         </div>

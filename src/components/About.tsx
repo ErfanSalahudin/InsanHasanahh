@@ -30,7 +30,7 @@ const features = [
 
 export function About() {
   return (
-    <section id="about" className="py-20 bg-gradient-to-b from-white to-blue-50">
+    <section id="about" className="py-20 bg-gradient-to-b from-background to-accent/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -51,8 +51,8 @@ export function About() {
           <h2 className="text-red-600 text-4xl md:text-5xl mb-4">
             TK INSAN HASANAH
           </h2>
-          <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-            Lembaga pendidikan anak usia dini yang berkomitmen untuk memberikan pendidikan terbaik 
+          <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
+            Lembaga pendidikan anak usia dini yang berkomitmen untuk memberikan pendidikan terbaik
             dengan suasana yang nyaman, aman, dan menyenangkan bagi putra-putri Anda.
           </p>
         </motion.div>
@@ -67,7 +67,7 @@ export function About() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               whileHover={{ y: -10 }}
-              className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow"
+              className="bg-card rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow"
             >
               <motion.div
                 whileHover={{ rotate: 360 }}
@@ -77,7 +77,7 @@ export function About() {
                 <feature.icon className="text-white" size={32} />
               </motion.div>
               <h3 className="text-red-600 text-xl mb-2">{feature.title}</h3>
-              <p className="text-gray-600">{feature.description}</p>
+              <p className="text-muted-foreground">{feature.description}</p>
             </motion.div>
           ))}
         </div>

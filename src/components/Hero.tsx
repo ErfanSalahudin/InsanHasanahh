@@ -15,7 +15,7 @@ export function Hero() {
   return (
     <section id="home" className="relative min-h-screen flex items-center overflow-hidden pt-20">
       {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-red-500 via-red-600 to-blue-600">
+      <div className="absolute inset-0 bg-gradient-to-br from-red-500 via-red-600 to-blue-600 dark:from-red-700 dark:via-red-800 dark:to-blue-800">
         <motion.div
           animate={{
             scale: [1, 1.2, 1],

@@ -25,7 +25,7 @@ export function Gallery() {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
   return (
-    <section id="gallery" className="py-20 bg-gradient-to-b from-white to-red-50">
+    <section id="gallery" className="py-20 bg-gradient-to-b from-background to-accent/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -46,7 +46,7 @@ export function Gallery() {
           <h2 className="text-red-600 text-4xl md:text-5xl mb-4">
             Kegiatan Sekolah
           </h2>
-          <p className="text-gray-600 text-lg max-w-3xl mx-auto">
+          <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
             Dokumentasi kegiatan dan aktivitas siswa-siswi TK Insan Hasanah
           </p>
         </motion.div>

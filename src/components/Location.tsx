@@ -3,7 +3,7 @@ import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 
 export function Location() {
   return (
-    <section id="location" className="py-20 bg-gradient-to-b from-red-50 to-blue-50">
+    <section id="location" className="py-20 bg-gradient-to-b from-accent/20 to-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -24,7 +24,7 @@ export function Location() {
           <h2 className="text-blue-600 text-4xl md:text-5xl mb-4">
             Kunjungi Kami
           </h2>
-          <p className="text-gray-600 text-lg max-w-3xl mx-auto">
+          <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
             Temukan lokasi TK Insan Hasanah dan kunjungi kami untuk informasi lebih lanjut
           </p>
         </motion.div>
@@ -38,9 +38,9 @@ export function Location() {
             transition={{ duration: 0.6 }}
             className="space-y-6"
           >
-            <div className="bg-white rounded-2xl p-8 shadow-lg">
+            <div className="bg-card rounded-2xl p-8 shadow-lg">
               <h3 className="text-red-600 text-2xl mb-6">Informasi Kontak</h3>
-              
+
               <motion.div
                 whileHover={{ x: 10 }}
                 className="flex items-start gap-4 mb-6"
@@ -49,8 +49,8 @@ export function Location() {
                   <MapPin className="text-white" size={24} />
                 </div>
                 <div>
-                  <h4 className="text-gray-800 mb-1">Alamat</h4>
-                  <p className="text-gray-600">
+                  <h4 className="text-foreground mb-1">Alamat</h4>
+                  <p className="text-muted-foreground">
                     Jl. Pesona Cianjur Indah No.14 BLOK A1, Nagrak, Cianjur, Cianjur Regency, West Java 43215
                   </p>
                 </div>
@@ -64,8 +64,8 @@ export function Location() {
                   <Phone className="text-white" size={24} />
                 </div>
                 <div>
-                  <h4 className="text-gray-800 mb-1">Telepon</h4>
-                  <p className="text-gray-600">085600842591</p>
+                  <h4 className="text-foreground mb-1">Telepon</h4>
+                  <p className="text-muted-foreground">085600842591</p>
                 </div>
               </motion.div>
 
@@ -77,8 +77,8 @@ export function Location() {
                   <Mail className="text-white" size={24} />
                 </div>
                 <div>
-                  <h4 className="text-gray-800 mb-1">Email</h4>
-                  <p className="text-gray-600">tkinsanhasanah05@gmail.com</p>
+                  <h4 className="text-foreground mb-1">Email</h4>
+                  <p className="text-muted-foreground">tkinsanhasanah05@gmail.com</p>
                 </div>
               </motion.div>
 
@@ -90,9 +90,9 @@ export function Location() {
                   <Clock className="text-white" size={24} />
                 </div>
                 <div>
-                  <h4 className="text-gray-800 mb-1">Jam Operasional</h4>
-                  <p className="text-gray-600">Senin - Jumat: 07.00 - 16.00 WIB</p>
-                  <p className="text-gray-600">Sabtu: 07.00 - 12.00 WIB</p>
+                  <h4 className="text-foreground mb-1">Jam Operasional</h4>
+                  <p className="text-muted-foreground">Senin - Jumat: 07.00 - 16.00 WIB</p>
+                  <p className="text-muted-foreground">Sabtu: 07.00 - 12.00 WIB</p>
                 </div>
               </motion.div>
             </div>
@@ -121,7 +121,7 @@ export function Location() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-white rounded-2xl overflow-hidden shadow-lg h-full min-h-[500px]"
+            className="bg-card rounded-2xl overflow-hidden shadow-lg h-full min-h-[500px]"
           >
             <iframe
               src="https://maps.google.com/maps?q=Jl.+Pesona+Cianjur+Indah+No.14+BLOK+A1,+Nagrak,+Cianjur,+Cianjur+Regency,+West+Java+43215&output=embed"
