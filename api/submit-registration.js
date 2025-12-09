@@ -90,12 +90,9 @@ export default async function (req, res) {
         errors.push('Tanggal lahir harus diisi');
       } else {
         const birthDate = new Date(formData.tanggalLahir);
-        const today = new Date();
 
         if (isNaN(birthDate.getTime())) {
           errors.push('Format tanggal lahir tidak valid');
-        } else if (birthDate > today) {
-          errors.push('Tanggal lahir tidak boleh di masa depan');
         }
       }
       if (!formData.kelasDituju || formData.kelasDituju === '') {

@@ -243,7 +243,7 @@ export function Registration() {
                   transition={{ delay: 0.5 }}
                 >
                   <label className="block text-foreground mb-2">
-                    <Calendar className="inline mr-2" size={18} />
+                    <Calendar className="inline mr-2 text-blue-500" size={18} />
                     Tanggal Lahir Anak
                   </label>
                   <input
@@ -252,7 +252,7 @@ export function Registration() {
                     value={formData.tanggalLahir}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-red-500 focus:outline-none transition-colors"
+                    className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-blue-500 focus:outline-none transition-colors"
                   />
                 </motion.div>
 
