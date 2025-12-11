@@ -324,8 +324,8 @@ export function Registration() {
         >
           <p className="text-muted-foreground">
             Butuh bantuan? Hubungi kami di{' '}
-            <a href="tel:085600842591" className="text-red-600 hover:underline">
-              085600842591
+            <a href="tel:+6285600842591" className="text-red-600 hover:underline">
+              +6285600842591
             </a>
             {' '}atau email ke {' '}
             <a href="mailto:tkinsanhasanah05@gmail.com" className="text-blue-600 hover:underline">

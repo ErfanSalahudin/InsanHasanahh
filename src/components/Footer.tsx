@@ -76,7 +76,7 @@ export function Footer() {
             <div className="space-y-2 text-red-100 text-sm mb-6">
               <p>Jl. Pesona Cianjur Indah No.14 BLOK A1</p>
               <p>Nagrak, Cianjur, Cianjur Regency, West Java 43215</p>
-              <p>Telp: 085600842591</p>
+              <p>Telp: +6285600842591</p>
               <p>Email: tkinsanhasanah05@gmail.com</p>
             </div>
             
