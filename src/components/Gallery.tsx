@@ -1,6 +1,17 @@
 import { motion } from 'motion/react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { useState } from 'react';
+import { useTheme } from '../contexts/ThemeContext';
+import kr1 from '../asset/kr1.jpg';
+import k2 from '../asset/k2.jpg';
+import kr3 from '../asset/kr3.jpg';
+import kr4 from '../asset/kr4.jpg';
+import kr5 from '../asset/kr5.jpg';
+import kr6 from '../asset/kr6.jpg';
+import kr7 from '../asset/kr7.jpg';
+import kr8 from '../asset/kr8.jpg';
+import kr9 from '../asset/kr9.jpg';
+
 
 const galleryImages = [
   {
@@ -16,16 +27,20 @@ const galleryImages = [
     title: 'Kegiatan Kreatif'
   },
   {
-    url: 'https://images.unsplash.com/photo-1710000736115-692bbb897fca?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzY2hvb2wlMjBwbGF5Z3JvdW5kfGVufDF8fHx8MTc2NTE4MjcyMnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    url: kr1,
     title: 'Bermain di Luar'
   },
 ];
 
 export function Gallery() {
+  const { theme } = useTheme();
+  console.log('Current theme:', theme); // Debug log
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const slides = [k2, kr3, kr4, kr5, kr6, kr7, kr8, kr9];
 
   return (
-    <section id="gallery" className="py-20 bg-gradient-to-b from-background to-accent/20">
+    <section id="gallery" className={`py-20 bg-gradient-to-b from-background to-accent/20 ${selectedImage === 3 ? 'bg-black' : ''}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -79,6 +94,31 @@ export function Gallery() {
             </motion.div>
           ))}
         </div>
+
+        {selectedImage === 3 && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black" onClick={() => setSelectedImage(null)}>
+            <div className="p-6 rounded-lg max-w-4xl relative bg-black" onClick={(e) => e.stopPropagation()}>
+              <div className="flex items-center justify-center space-x-4">
+                <button
+                  onClick={() => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)}
+                  className="bg-blue-500 text-white rounded-full p-3 hover:bg-blue-600 border-2 border-white shadow-lg"
+                >
+                  {'<'}
+                </button>
+                <div>
+                  <h3 className={`text-center text-lg font-semibold rounded px-4 py-2 mb-4 ${theme === 'dark' ? 'bg-blue-900 text-red-500' : 'bg-red-800 text-blue-900'}`}>Bermain di Luar</h3>
+                  <ImageWithFallback src={slides[currentSlide]} alt={`Bermain di Luar ${currentSlide + 1}`} className="w-full h-96 object-cover rounded shadow-2xl" />
+                </div>
+                <button
+                  onClick={() => setCurrentSlide((prev) => (prev + 1) % slides.length)}
+                  className="bg-blue-500 text-white rounded-full p-3 hover:bg-blue-600 border-2 border-white shadow-lg"
+                >
+                  {'>'}
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
 
         {/* Animated Decorations */}
         <div className="relative mt-16 flex justify-center gap-4">
