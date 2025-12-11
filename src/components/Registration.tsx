@@ -274,8 +274,8 @@ export function Registration() {
                     className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-blue-500 focus:outline-none transition-colors"
                   >
                     <option value="" style={{ color: 'black' }}>Pilih kelas</option>
-                    <option value="Kelas B" style={{ color: 'black' }}>Kelas B</option>
-                    <option value="Kelas A" style={{ color: 'black' }}>Kelas A</option>
+                    <option value="Kelompok B" style={{ color: 'black' }}>Kelompok B</option>
+                    <option value="Kelompok A" style={{ color: 'black' }}>Kelompok A</option>
                     <option value="Kelompok Bermain" style={{ color: 'black' }}>Kelompok Bermain</option>
                   </select>
                 </motion.div>
