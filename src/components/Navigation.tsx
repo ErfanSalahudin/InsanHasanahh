@@ -40,7 +40,7 @@ export function Navigation() {
             />
             <div>
               <h1 className="text-red-600 font-bold">TK INSAN HASANAH</h1>
-              <p className="text-xs text-muted-foreground">Membentuk Generasi Berkualitas</p>
+              <p className="text-xs text-muted-foreground">Membentuk Generasi CERDAS</p>
             </div>
           </motion.div>
 
