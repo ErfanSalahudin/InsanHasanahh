@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'motion/react';
-import { ImageWithFallback } from './figma/ImageWithFallback';
+import { ImageWithFallback } from './ImageWithFallback';
 import { ArrowRight, Star } from 'lucide-react';
 import {
   Dialog,
@@ -8,7 +8,7 @@ import {
   DialogDescription,
   DialogTitle,
   DialogTrigger,
-} from './ui/dialog';
+} from '././Tampilan/dialog';
 import accreditationCert from '../asset/Sertifikat Akreditasi TK InHas_page-0001.jpg';
 
 export function Hero() {
@@ -111,12 +111,12 @@ export function Hero() {
                 <div className="text-white text-sm">Tahun Pengalaman</div>
               </div>
               <div className="text-center">
-                <div className="text-white text-3xl">500+</div>
+                <div className="text-white text-3xl">100+</div>
                 <div className="text-white text-sm">Alumni</div>
               </div>
               <div className="text-center">
-                <div className="text-white text-3xl">15+</div>
-                <div className="text-white text-sm">Guru Profesional</div>
+                <div className="text-white text-3xl">6+</div>
+                <div className="text-white text-sm">Guru Profesional dan Berpengalaman</div>
               </div>
             </motion.div>
           </motion.div>

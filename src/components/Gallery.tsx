@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { ImageWithFallback } from './figma/ImageWithFallback';
+import { ImageWithFallback } from './ImageWithFallback';
 import { useState } from 'react';
 import { useTheme } from '../contexts/ThemeContext';
 import kr1 from '../asset/kr1.jpg';
@@ -11,6 +11,14 @@ import kr6 from '../asset/kr6.jpg';
 import kr7 from '../asset/kr7.jpg';
 import kr8 from '../asset/kr8.jpg';
 import kr9 from '../asset/kr9.jpg';
+import kr10 from '../asset/kr10.jpeg';
+import kgr from '../asset/kgr.jpeg';
+import kgr1 from '../asset/kgr1.jpeg';
+import kgr2 from '../asset/kgr2.jpeg';
+import kgr3 from '../asset/kgr3.jpeg';
+import kgr4 from '../asset/kgr4.jpeg';
+
+
 
 
 const galleryImages = [
@@ -23,7 +31,7 @@ const galleryImages = [
     title: 'Pembelajaran di Kelas'
   },
   {
-    url: 'https://images.unsplash.com/photo-1762415845024-694f45017f31?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaGlsZHJlbiUyMGxlYXJuaW5nJTIwYWN0aXZpdGllc3xlbnwxfHx8fDE3NjUxNzAxMjZ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    url: kgr,
     title: 'Kegiatan Kreatif'
   },
   {
@@ -34,15 +42,16 @@ const galleryImages = [
 
 export function Gallery() {
   const { theme } = useTheme();
-  console.log('Current theme:', theme); // Debug log
+  console.log('Current theme:', theme); 
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentSlide2, setCurrentSlide2] = useState(0);
   const slides = [k2, kr3, kr4, kr5, kr6, kr7, kr8, kr9];
+  const slides2 = [kgr, kgr1, kgr2, kgr3, kgr4];
 
   return (
-    <section id="gallery" className={`py-20 bg-gradient-to-b from-background to-accent/20 ${selectedImage === 3 ? 'bg-black' : ''}`}>
+    <section id="gallery" className={`py-20 bg-gradient-to-b from-background to-accent/20 ${(selectedImage === 3 || selectedImage === 2) ? 'bg-black' : ''}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -66,7 +75,6 @@ export function Gallery() {
           </p>
         </motion.div>
 
-        {/* Gallery Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {galleryImages.map((image, index) => (
             <motion.div
@@ -120,7 +128,31 @@ export function Gallery() {
           </div>
         )}
 
-        {/* Animated Decorations */}
+        {selectedImage === 2 && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black" onClick={() => setSelectedImage(null)}>
+            <div className="p-6 rounded-lg max-w-4xl relative bg-black" onClick={(e) => e.stopPropagation()}>
+              <div className="flex items-center justify-center space-x-4">
+                <button
+                  onClick={() => setCurrentSlide2((prev) => (prev - 1 + slides2.length) % slides2.length)}
+                  className="bg-blue-500 text-white rounded-full p-3 hover:bg-blue-600 border-2 border-white shadow-lg"
+                >
+                  {'<'}
+                </button>
+                <div>
+                  <h3 className={`text-center text-lg font-semibold rounded px-4 py-2 mb-4 ${theme === 'dark' ? 'bg-blue-900 text-red-500' : 'bg-red-800 text-blue-900'}`}>Kegiatan Kreatif</h3>
+                  <ImageWithFallback src={slides2[currentSlide2]} alt={`Kegiatan Kreatif ${currentSlide2 + 1}`} className="w-full h-96 object-cover rounded shadow-2xl" />
+                </div>
+                <button
+                  onClick={() => setCurrentSlide2((prev) => (prev + 1) % slides2.length)}
+                  className="bg-blue-500 text-white rounded-full p-3 hover:bg-blue-600 border-2 border-white shadow-lg"
+                >
+                  {'>'}
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
+
         <div className="relative mt-16 flex justify-center gap-4">
           {[...Array(5)].map((_, i) => (
             <motion.div

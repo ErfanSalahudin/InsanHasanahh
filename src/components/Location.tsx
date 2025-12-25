@@ -91,8 +91,7 @@ export function Location() {
                 </div>
                 <div>
                   <h4 className="text-foreground mb-1">Jam Operasional</h4>
-                  <p className="text-muted-foreground">Senin - Jumat: 07.00 - 16.00 WIB</p>
-                  <p className="text-muted-foreground">Sabtu: 07.00 - 12.00 WIB</p>
+                  <p className="text-muted-foreground">Senin - Jumat: 07.00 - 13:00 WIB</p>
                 </div>
               </motion.div>
             </div>

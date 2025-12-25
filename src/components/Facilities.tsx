@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
-import { ImageWithFallback } from './figma/ImageWithFallback';
-import { BookOpen, Palette, Music, Monitor, Flame, TreePine } from 'lucide-react';
+import { ImageWithFallback } from './ImageWithFallback';
+import { BookOpen, Palette, Music, Monitor, Flame, TreePine, Library } from 'lucide-react';
 
 const facilities = [
   {
@@ -14,9 +14,9 @@ const facilities = [
     description: 'Ruang khusus untuk mengembangkan kreativitas anak'
   },
   {
-    icon: Music,
-    title: 'Ruang Musik',
-    description: 'Fasilitas musik lengkap untuk pembelajaran seni'
+    icon: Library,
+    title: 'Ruang Perpustakaan',
+    description: 'Fasilitas bacaan buku paling lengkap'
   },
   {
     icon: Monitor,
